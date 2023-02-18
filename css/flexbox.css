@@ -4,7 +4,8 @@
 
 @media (min-width: 768px) {
   .main-header,
-  .main-nav{
+  .main-nav,
+  .row{
     display: flex;
   }
 
@@ -12,12 +13,28 @@
     flex-direction: column;
     align-items: center;
   }
-
+  /*Each column is 50% wide, anything more will break off to next line with flex-wrap */
+  .col{
+    flex: 1 50%;
+  }
+  .row{
+    flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 1025px) {
     .main-header{
       flex-direction: row;
       justify-content: space-between;
+    }  
+    /*Space is no longer distributed */
+    .col{
+      flex-basis: 0;
+    }
+    .primary{
+      flex-grow: 1.4;
+    }
+    .secondary{
+      order: -1;
     }
 }
