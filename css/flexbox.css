@@ -4,13 +4,17 @@
 
 @media (min-width: 768px) {
   .main-header,
-  .main-nav{
+  .main-nav,
+  .row{
     display: flex;
   }
 
   .main-header{
     flex-direction: column;
     align-items: center;
+  }
+  .col{
+    flex: 1;
   }
 
 }
@@ -19,5 +23,8 @@
     .main-header{
       flex-direction: row;
       justify-content: space-between;
+    }
+    .primary.col{
+      flex: 2;
     }
 }
